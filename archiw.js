@@ -1,3 +1,12 @@
+//video 5-8
+var fs = require('fs');
+var readable = fs.createReadStream('./data.txt', 'utf8');
+var writeable = fs.createWriteStream('./data_COPY.txt');
+readable.on('data', function(chunk) {
+	//console.log(chunk);
+	writeable.write(chunk);
+});
+
 //video 5-7
 var bufer = new Buffer('Bufor');
 bufer.write('abc');
