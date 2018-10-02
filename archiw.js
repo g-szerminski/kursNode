@@ -1,3 +1,9 @@
+//video 5-9
+var fs = require('fs');
+var readable = fs.createReadStream('./data.txt');
+var writeable = fs.createWriteStream('./data_COPY.txt'); 
+readable.pipe(writeable);
+
 //video 5-8
 var fs = require('fs');
 var readable = fs.createReadStream('./data.txt', 'utf8');
@@ -24,7 +30,6 @@ console.log(bufer.toString());
 // video 5-5
 //-------------USUWANIE KATALOGU--------------------
 var fs = require('fs');
-
 fs.rmdir('styles', function(error) {
 	if(error) {
 		console.error(error);
@@ -34,7 +39,6 @@ fs.rmdir('styles', function(error) {
 });
 //------------ZMIANA NAZWY KATALOGU------------------
 var fs = require('fs');
-
 fs.rename('scripts', 'styles', function(error) {
 	if(error) {
 		console.error(error);
@@ -81,14 +85,12 @@ fs.writeFile('footer.html', content, function(error) {
 ------------------------------------------------------------------
 //vide 5-2
 var fs = require('fs');
-
 fs.readFile('./modules.txt', 'utf8', function(error, content) {
 	console.log(content);
 });
 -----------------------------------------------
 //video 5-1
 var fs = require('fs');
-
 fs.readdir('./gdg', function(error, fileList) {
 	console.error(error);
 	console.log(fileList);
@@ -100,7 +102,6 @@ fs.readdir('./gdg', function(error, fileList) {
 ---------------------------------------------------
 //video 4-7
 const readline = require('readline');
-
 var rl = readline.createInterface({
 	input: process.stdin,
 	output: process.stdout
@@ -120,12 +121,10 @@ rl.question('Jak masz na imię ?', function(answer){
 ----------------------------------------------
 // video 4-6
 let currentTime = 0;
-
 var interval = setInterval(function() {
 	currentTime += 1000;
 	console.log('Bieżący czas: ' + currentTime/1000 + 's');
 }, 1000);
-
 setTimeout(function() {
 	clearInterval(interval);
 }, 10000);
