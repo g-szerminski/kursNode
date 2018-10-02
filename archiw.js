@@ -1,3 +1,14 @@
+//video 6-3
+var http = require('http');
+var fs = require('fs');
+http.createServer(function(req, res) {
+	//res.writeHead(200, {'content-type': 'text/html'});
+	res.writeHead(200, {'content-type': 'text/plain'});
+	var html = fs.readFileSync('./index.html'); // Remember: create index.html file in the same folder for correct working of server !!!
+	res.end(html);
+}).listen(3000);
+console.log('Server uruchomiony');
+
 //video 6-2
 var http = require('http');
 http.createServer(function(req, res) {
