@@ -1,3 +1,12 @@
+//video 6-1
+var http = require('http');
+http.get('http://websamuraj.pl', function(res) {
+	res.on('data', function(data) {
+		console.log(data.toString());
+	})	
+	//console.log(res.statusCode);
+});
+
 //video 5-9
 var fs = require('fs');
 var readable = fs.createReadStream('./data.txt');
