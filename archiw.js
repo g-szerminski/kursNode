@@ -1,3 +1,14 @@
+//video 6-7
+var http = require('http');
+var fs = require('fs');
+http.createServer(function(req, res){
+	res.writeHead(200, {'content-type': 'text/html'});
+	fs.createReadStream('./index.html').pipe(res);
+	// var html = fs.readFileSync('./index.html');
+	// res.end(html);
+}).listen(3000);
+console.log('Serwer uruchomiony...');
+
 //video 6-6
 var http = require('http');
 http.createServer(function(req, res){
