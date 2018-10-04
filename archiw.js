@@ -1,4 +1,4 @@
-//video 6-5
+//video 6-6
 var http = require('http');
 http.createServer(function(req, res){
 	var data = {
@@ -8,6 +8,25 @@ http.createServer(function(req, res){
 	};
 	res.writeHead(200, {'content-type': 'application/json'});
 	res.end(JSON.stringify(data));
+}).listen(3000);
+console.log('Serwer uruchomiony...');
+
+//video 6-5
+var http = require('http');
+http.createServer(function(req, res){
+	if (req.url === '/') {
+		res.writeHead(200);
+		res.end('Strona startowa');		
+	} else if (req.url === '/products') {
+		res.writeHead(200);
+		res.end('Strona Produkty');				
+	} else if (req.url === '/blog') {
+		res.writeHead(200);
+		res.end('Strona Blog');				
+	} else {		
+		res.writeHead(404);
+		res.end('Strony nie znaleziono');				
+	}
 }).listen(3000);
 console.log('Serwer uruchomiony...');
 
