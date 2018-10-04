@@ -1,5 +1,0 @@
-<footer>
-<div class='copy'>
-	<p>Copyright</p>
-</div>
-</footer>
