@@ -1,3 +1,7 @@
+//video 7-2
+var us = require('underscore.string');
+console.log(us.capitalize('testowy string'));
+
 //video 6-7
 var http = require('http');
 var fs = require('fs');
