@@ -1,3 +1,13 @@
+//video 10_4
+var assert = require('assert');
+// function add(a, b) {
+// 	return a + b;
+// }
+// var result = add(5,6);
+var obj1 = {'name': 'Node'};
+var obj2 = {'name': 'Node.js'};
+assert.deepEqual(obj1, obj2);
+
 //video 9-6
 var MongoClient = require('mongodb').MongoClient;
 var url = 'mongodb://localhost:27017/test';
